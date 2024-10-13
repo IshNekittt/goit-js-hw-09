@@ -8,5 +8,5 @@
     />
   </a>
 </li>
-`).join("");s.innerHTML=l;new n(".gallery a",{captionsData:"alt",captionDelay:300});
+`).join("");s.innerHTML=l;new n(".gallery a",{captionsData:"alt",captionDelay:250});
 //# sourceMappingURL=1-gallery.js.map
