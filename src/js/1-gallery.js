@@ -1,4 +1,4 @@
-import SimpleLightbox from 'SimpleLightbox';
+import SimpleLightbox from 'simplelightbox';
 const images = [
   {
     preview:
