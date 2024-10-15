@@ -7,8 +7,8 @@ const dataName = 'feedback-form-state';
 const form = document.querySelector('.feedback-form');
 
 window.addEventListener('load', () => {
-  if (localStorage.getItem('feedback-form-state')) {
-    const parsedData = JSON.parse(localStorage.getItem('feedback-form-state'));
+  const parsedData = JSON.parse(localStorage.getItem('feedback-form-state'));
+  if (parsedData) {
     for (const element in parsedData) {
       form.elements[element].value = parsedData[element];
       formData[element] = parsedData[element];
@@ -31,8 +31,7 @@ form.addEventListener('submit', e => {
     localStorage.removeItem(dataName);
     formData.email = '';
     formData.message = '';
-    form.elements.email.value = '';
-    form.elements.message.value = '';
+    e.currentTarget.reset();
   } else {
     alert('Fill please all fields');
   }
