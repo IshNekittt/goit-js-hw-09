@@ -7,7 +7,7 @@ const dataName = 'feedback-form-state';
 const form = document.querySelector('.feedback-form');
 
 window.addEventListener('load', () => {
-  const parsedData = JSON.parse(localStorage.getItem('feedback-form-state'));
+  const parsedData = JSON.parse(localStorage.getItem(dataName));
   if (parsedData) {
     for (const element in parsedData) {
       form.elements[element].value = parsedData[element];
